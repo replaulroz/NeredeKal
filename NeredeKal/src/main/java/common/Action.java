@@ -13,7 +13,6 @@ import utilities.Driver;
 
 import java.net.MalformedURLException;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 public class Action {
@@ -61,7 +60,7 @@ public class Action {
         try {
             LOGGER.info("Checking is element present");
             WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(Integer.parseInt(Configuration.getProperty("timeout"))));
-            webDriver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+            webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             wait.until(ExpectedConditions.presenceOfElementLocated(by));
             webDriver.findElement(by);
             return true;

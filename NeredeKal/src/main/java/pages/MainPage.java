@@ -20,7 +20,7 @@ public class MainPage {
 
     public final By selectedDate = By.xpath("//div[@class='css-13rgr3v']");
 
-    public final By searchBox = By.xpath("//input[contains(@placeholder,'Konum ya da otel ismi girin')]");
+    public final By searchBox = By.xpath("//input[contains(@placeholder,'Nereye')]");
 
     public final By searchButton = By.xpath("//div[contains(text(),'ARA')]/..");
 
